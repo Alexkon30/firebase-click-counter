@@ -2,7 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { initializeApp } from 'firebase/app'
+// import { getFirestore } from 'firebase/firestore/lite'
+
+// eslint-disable-next-line
+const app = initializeApp({
+  apiKey: "AIzaSyAOQkszBNubewymxxXLdonq7Y8gR7vmAGc",
+  authDomain: "click-counter-82b99.firebaseapp.com",
+  projectId: "click-counter-82b99",
+  storageBucket: "click-counter-82b99.appspot.com",
+  messagingSenderId: "939751074053",
+  appId: "1:939751074053:web:50c773e7c81ca471b9af6c"
+})
+// const db = getFirestore(app)
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +24,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
